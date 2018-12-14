@@ -1,0 +1,44 @@
+1,登录
+   itchat.auto_login()  
+   参数: 
+   hotReload==True         可实现保留登录状态,
+   loginCallback=fun1,     登录完成后调用的函数
+   exitCallback=fun2,        退出后调用的方法(默认删除二维码,删除命令行)
+
+2,回复消息
+   itchat.send()
+   参数:
+   msg='Text Message'       发送文本内容消息
+   toUserName=None         发送对象,留空将发送给自己
+   @fil@文件路径                   发送文件
+   @img@文件路径               发送图片           
+   @vid@文件路径                 发送视频
+
+3,好友
+   it.get_friends()
+   参数:
+   update=True                    更新好友列表并返回
+
+4,好友搜索
+    itchat.search_friends()     获取自己的用户信息，返回自己的属性字典
+    参数:
+    userName='网名'             获取网名用户的信息
+    name='小红'                     获取备注为小红的信息
+    wechatAccount='123'    获取账号为123的用户信息
+    
+5,更新好友
+   itchat.update_friend()       更新好友信息
+   参数:
+   userName='小红'                更新单个好友信息
+   userName=['小红','小黑',...]  更新多个好友信息
+
+6,获取公众号列表
+   itchat.get_mps(update=True)               将返回完整的工作号列表
+   itchat.search_mps(userName='中国历史')          获取指定公众号
+   itchat.search_mps(name='@')                   获取含有指定字符的公众号
+    
+7,群聊
+   itchat.get_chatrooms()
+   itchat.search_chatrooms()
+   itchat.update_chatroom()
+   
